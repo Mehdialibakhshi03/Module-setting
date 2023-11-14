@@ -1,8 +1,7 @@
 {
     "name": "avatar/setting-module",
+    "type":"laravel-module",
     "description": "",
-     "minimum-stability": "dev",
-    "prefer-stable": true,
     "authors": [
         {
             "name": "Nicolas Widart",
