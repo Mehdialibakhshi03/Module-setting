@@ -1,6 +1,8 @@
 {
     "name": "avatar/setting-module",
     "description": "",
+     "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Nicolas Widart",
