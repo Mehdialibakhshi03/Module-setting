@@ -15,7 +15,7 @@
             }
         },
      
-    "module-dir": "Modules"
+    "module-dir": "Custom"
 
     },
     "autoload": {
