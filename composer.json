@@ -13,7 +13,10 @@
             "aliases": {
 
             }
-        }
+        },
+     
+    "module-dir": "Modules"
+
     },
     "autoload": {
         "psr-4": {
