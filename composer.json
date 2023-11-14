@@ -13,9 +13,7 @@
             "aliases": {
 
             }
-        },
-     
-    "module-dir": "Custom"
+        }
 
     },
     "autoload": {
