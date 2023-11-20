@@ -42,22 +42,32 @@
             filebrowserUploadMethod: 'form'
         });
 
-        function removeFile($value) {
+
+
+        function removeFile(value) {
+            let remove_modal = $('#remove_modal');
+            $('#id').val(value);
+            remove_modal.modal('show');
+        }
+
+        function Remove() {
+            let value = $('#id').val();
             let url="{{ route('admin.settings.destroy',['setting'=>':setting']) }}";
-            url = url.replace(':setting', $value);
+            url = url.replace(':setting', value);
             $.ajax({
                 url: url,
-                method: 'post',
-                dataType: 'json',
                 data: {
-                    _token: '{{csrf_token()}}',
-                    value: $value
+                    _token: "{{ csrf_token() }}",
+                },
+                dataType: "json",
+                method: "post",
+                beforeSend: function () {
+
                 },
                 success: function (data) {
-                    console.log(data);
                     window.location.reload();
                 }
-            });
+            })
         }
     </script>
 @endpush
@@ -310,6 +320,26 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{{--    //removeModal--}}
+    <div id="remove_modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>
+                        Are You Sure ?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No!</button>
+                        <button onclick="Remove()" type="submit" class="btn btn-success" >Delete
+                        </button>
+                        <input id="id" name="id" type="hidden" value="">
+                    </div>
                 </div>
             </div>
         </div>
