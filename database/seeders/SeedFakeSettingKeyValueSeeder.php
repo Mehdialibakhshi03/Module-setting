@@ -28,6 +28,12 @@ class SeedFakeSettingKeyValueSeeder extends Seeder
             'admin_avatar'=>'admin_avatar',
             'side_bar_color'=>'red',
             'top_bar_color'=>'black',
+            'alert_description'=>'alert_description',
+            'alert_bg_color'=>'yellow',
+            'alert_text_color'=>'black',
+            'alert_font_size'=>14,
+            'alert_height'=>50,
+            'alert_active'=>1,
         ];
 
         foreach($array as $key => $value){

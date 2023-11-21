@@ -26,6 +26,12 @@ class SettingRepo
             $email = $request->email;
             $top_bar_color = $request->top_bar_color;
             $side_bar_color = $request->side_bar_color;
+            $alert_description =$request->alert_description;
+            $alert_bg_color = $request->alert_bg_color;
+            $alert_text_color = $request->alert_text_color;
+            $alert_font_size =$request->alert_font_size;
+            $alert_height = $request->alert_height;
+            $alert_active=$request->has('alert_active')?1:0;
             $array = [
                 'logo' => $logo,
                 'fav_icon' => $fav_icon,
@@ -40,6 +46,12 @@ class SettingRepo
                 'admin_avatar' => $admin_avatar,
                 'top_bar_color' => $top_bar_color,
                 'side_bar_color' => $side_bar_color,
+                'alert_description' => $alert_description,
+                'alert_bg_color' => $alert_bg_color,
+                'alert_text_color' => $alert_text_color,
+                'alert_font_size' => $alert_font_size,
+                'alert_height' => $alert_height,
+                'alert_active' => $alert_active,
             ];
             foreach ($array as $key => $value) {
                 Setting::where("key", $key)->update(["value"=> $value]);

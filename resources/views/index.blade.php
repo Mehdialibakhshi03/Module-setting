@@ -316,6 +316,78 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h3>Top Bar Message</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="settings-profile">
+                                            <div class="row mt-4">
+                                                <div class="col-12 mb20">
+                                                    <label for="alert_description">alert_description</label>
+                                                    <textarea id="alert_description" name="alert_description"
+                                                              class="form-control">{{ $alert_description }}</textarea>
+                                                    @error('alert_description')
+                                                    <p class="input-error-validate">
+                                                        {{ $message }}
+                                                    </p>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6 mb20">
+                                                    <label for="alert_bg_color">Background Color</label>
+                                                    <input id="alert_bg_color" type="color" name="alert_bg_color"
+                                                           class="form-control"
+                                                           value="{{ $alert_bg_color }}">
+                                                    @error('alert_bg_color')
+                                                    <p class="input-error-validate">
+                                                        {{ $message }}
+                                                    </p>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6 mb20">
+                                                    <label for="alert_text_color">text Color</label>
+                                                    <input id="alert_text_color" type="color" name="alert_text_color"
+                                                           class="form-control"
+                                                           value="{{ $alert_text_color }}">
+                                                    @error('alert_text_color')
+                                                    <p class="input-error-validate">
+                                                        {{ $message }}
+                                                    </p>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6 mb20">
+                                                    <label for="alert_font_size">Font Size(px)</label>
+                                                    <input id="alert_font_size" type="number" name="alert_font_size"
+                                                           class="form-control"
+                                                           value="{{ $alert_font_size }}">
+                                                    @error('alert_font_size')
+                                                    <p class="input-error-validate">
+                                                        {{ $message }}
+                                                    </p>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6 mb20">
+                                                    <label for="alert_height">alert height(px)</label>
+                                                    <input id="alert_height" type="number" name="alert_height"
+                                                           class="form-control"
+                                                           value="{{ $alert_height }}">
+                                                    @error('alert_height')
+                                                    <p class="input-error-validate">
+                                                        {{ $message }}
+                                                    </p>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6 mb20">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="alert_active" name="alert_active" {{ $alert_active==1 ? 'checked' : '' }}>
+                                                        <label class="form-check-label" for="alert_active">active</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
